@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{3f9367c8-d270-4ac2-9506-432b540c23de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Base">
+      <UniqueIdentifier>{63253aeb-0fd6-4d3c-a6c3-856587fc662c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Local">
+      <UniqueIdentifier>{46ccc145-9168-42a5-bcac-fa19589d04dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ymfm">
+      <UniqueIdentifier>{0504ff80-7288-467e-91aa-ddc85e5f1eec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nlohmann">
+      <UniqueIdentifier>{8ab6ec99-b628-4c8e-ac30-0af881640b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="martin-finke">
+      <UniqueIdentifier>{5306531e-513b-4392-8ef5-2f1bf59ddd52}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FmStation.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="FmStationDlg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Base\Base.h">
+      <Filter>Common\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Base\Cast.h">
+      <Filter>Common\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Base\Macro.h">
+      <Filter>Common\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Base\Type.h">
+      <Filter>Common\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Base\Util.h">
+      <Filter>Common\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Local\Alloc.h">
+      <Filter>Common\Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Local\Array.h">
+      <Filter>Common\Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Local\Local.h">
+      <Filter>Common\Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Local\Ptr.h">
+      <Filter>Common\Local</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_adpcm.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_fm.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_fm.ipp">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_misc.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_opl.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_opm.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_opn.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_opq.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_opx.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_opz.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_pcm.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="ymfm\ymfm_ssg.h">
+      <Filter>ymfm</Filter>
+    </ClInclude>
+    <ClInclude Include="Voice.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="FmChip.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Chip.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ChipYM2608.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingTab.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleTab.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="MidiTab.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="InstTab.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticList.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="RingQueue.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ListBoxT.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="BatchDlg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TimbreDlg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="nlohmann\json.hpp">
+      <Filter>nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="nlohmann\json_fwd.hpp">
+      <Filter>nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Value.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ListBoxCustom.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="DrumTab.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="martin-finke\Filter.h">
+      <Filter>martin-finke</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FmStation.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="FmStationDlg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_adpcm.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_misc.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opl.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opm.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opn.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opq.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opz.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_pcm.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_ssg.cpp">
+      <Filter>ymfm</Filter>
+    </ClCompile>
+    <ClCompile Include="Voice.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ChipYM2608.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingTab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="MidiTab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="InstTab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticList.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="BatchDlg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TimbreDlg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Intermediate.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Value.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBoxCustom.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="DrumTab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="martin-finke\Filter.cpp">
+      <Filter>martin-finke</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBoxT.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FmStation.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\FmStation.rc2">
+      <Filter>リソース ファイル</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\FmStation.ico">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\BlackOff.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\BlackOn.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOff.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOn.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOffChip.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOnChip.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOffB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOffL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOffR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOnB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOnL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Image\WhiteOnR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\BlackOff.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\BlackOn.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\WhiteOffB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\WhiteOffL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\WhiteOffR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\WhiteOnB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\WhiteOnL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageSmall\WhiteOnR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\BlackOff.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\BlackOn.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\WhiteOffB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\WhiteOffL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\WhiteOffR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\WhiteOnB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\WhiteOnL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageMedium\WhiteOnR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\BlackOff.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\BlackOn.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOffB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOffL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOffR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOnB.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOnL.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOnR.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\0.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\1.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\2.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\3.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\4.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\5.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\6.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageAlg\7.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\BlackOn_Invalid.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOnB_Invalid.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOnL_Invalid.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="ImageBig\WhiteOnR_Invalid.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

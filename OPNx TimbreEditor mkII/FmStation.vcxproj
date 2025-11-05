@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{8E65521B-3F53-8E98-3D6A-45FFB19E3C5C}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>FmStation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>OPNx-TimbreEditor-mkII</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <OpenMPSupport>false</OpenMPSupport>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0411</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0411</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0411</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <OpenMPSupport>false</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0411</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="BatchDlg.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="Chip.h" />
+    <ClInclude Include="ChipYM2608.h" />
+    <ClInclude Include="DrumTab.h" />
+    <ClInclude Include="Intermediate.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="ListBoxCustom.h" />
+    <ClInclude Include="ListBoxT.h" />
+    <ClInclude Include="Common\Base\Base.h" />
+    <ClInclude Include="Common\Base\Cast.h" />
+    <ClInclude Include="Common\Base\Macro.h" />
+    <ClInclude Include="Common\Base\Type.h" />
+    <ClInclude Include="Common\Base\Util.h" />
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\Local\Alloc.h" />
+    <ClInclude Include="Common\Local\Array.h" />
+    <ClInclude Include="Common\Local\Local.h" />
+    <ClInclude Include="Common\Local\Ptr.h" />
+    <ClInclude Include="FmChip.h" />
+    <ClInclude Include="FmStation.h" />
+    <ClInclude Include="FmStationDlg.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="InstTab.h" />
+    <ClInclude Include="martin-finke\Filter.h" />
+    <ClInclude Include="nlohmann\json.hpp" />
+    <ClInclude Include="nlohmann\json_fwd.hpp" />
+    <ClInclude Include="RingQueue.h" />
+    <ClInclude Include="StaticList.h" />
+    <ClInclude Include="MidiTab.h" />
+    <ClInclude Include="ModuleTab.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SettingTab.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="TimbreDlg.h" />
+    <ClInclude Include="Value.h" />
+    <ClInclude Include="Voice.h" />
+    <ClInclude Include="ymfm\ymfm.h" />
+    <ClInclude Include="ymfm\ymfm_adpcm.h" />
+    <ClInclude Include="ymfm\ymfm_fm.h" />
+    <ClInclude Include="ymfm\ymfm_fm.ipp" />
+    <ClInclude Include="ymfm\ymfm_misc.h" />
+    <ClInclude Include="ymfm\ymfm_opl.h" />
+    <ClInclude Include="ymfm\ymfm_opm.h" />
+    <ClInclude Include="ymfm\ymfm_opn.h" />
+    <ClInclude Include="ymfm\ymfm_opq.h" />
+    <ClInclude Include="ymfm\ymfm_opx.h" />
+    <ClInclude Include="ymfm\ymfm_opz.h" />
+    <ClInclude Include="ymfm\ymfm_pcm.h" />
+    <ClInclude Include="ymfm\ymfm_ssg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="BatchDlg.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="ChipYM2608.cpp" />
+    <ClCompile Include="DrumTab.cpp" />
+    <ClCompile Include="FmStation.cpp" />
+    <ClCompile Include="FmStationDlg.cpp" />
+    <ClCompile Include="InstTab.cpp" />
+    <ClCompile Include="Intermediate.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="ListBoxCustom.cpp" />
+    <ClCompile Include="ListBoxT.cpp" />
+    <ClCompile Include="martin-finke\Filter.cpp" />
+    <ClCompile Include="StaticList.cpp" />
+    <ClCompile Include="MidiTab.cpp" />
+    <ClCompile Include="ModuleTab.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SettingTab.cpp" />
+    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="TimbreDlg.cpp" />
+    <ClCompile Include="Value.cpp" />
+    <ClCompile Include="Voice.cpp" />
+    <ClCompile Include="ymfm\ymfm_adpcm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_misc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opn.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opq.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_opz.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_pcm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ymfm\ymfm_ssg.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FmStation.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\FmStation.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ImageAlg\0.bmp" />
+    <Image Include="ImageAlg\1.bmp" />
+    <Image Include="ImageAlg\2.bmp" />
+    <Image Include="ImageAlg\3.bmp" />
+    <Image Include="ImageAlg\4.bmp" />
+    <Image Include="ImageAlg\5.bmp" />
+    <Image Include="ImageAlg\6.bmp" />
+    <Image Include="ImageAlg\7.bmp" />
+    <Image Include="ImageBig\BlackOff.bmp" />
+    <Image Include="ImageBig\BlackOn.bmp" />
+    <Image Include="ImageBig\BlackOn_Invalid.bmp" />
+    <Image Include="ImageBig\WhiteOffB.bmp" />
+    <Image Include="ImageBig\WhiteOffL.bmp" />
+    <Image Include="ImageBig\WhiteOffR.bmp" />
+    <Image Include="ImageBig\WhiteOnB.bmp" />
+    <Image Include="ImageBig\WhiteOnB_Invalid.bmp" />
+    <Image Include="ImageBig\WhiteOnL.bmp" />
+    <Image Include="ImageBig\WhiteOnL_Invalid.bmp" />
+    <Image Include="ImageBig\WhiteOnR.bmp" />
+    <Image Include="ImageBig\WhiteOnR_Invalid.bmp" />
+    <Image Include="ImageMedium\BlackOff.bmp" />
+    <Image Include="ImageMedium\BlackOn.bmp" />
+    <Image Include="ImageMedium\WhiteOffB.bmp" />
+    <Image Include="ImageMedium\WhiteOffL.bmp" />
+    <Image Include="ImageMedium\WhiteOffR.bmp" />
+    <Image Include="ImageMedium\WhiteOnB.bmp" />
+    <Image Include="ImageMedium\WhiteOnL.bmp" />
+    <Image Include="ImageMedium\WhiteOnR.bmp" />
+    <Image Include="ImageSmall\BlackOff.bmp" />
+    <Image Include="ImageSmall\BlackOn.bmp" />
+    <Image Include="ImageSmall\WhiteOffB.bmp" />
+    <Image Include="ImageSmall\WhiteOffL.bmp" />
+    <Image Include="ImageSmall\WhiteOffR.bmp" />
+    <Image Include="ImageSmall\WhiteOnB.bmp" />
+    <Image Include="ImageSmall\WhiteOnL.bmp" />
+    <Image Include="ImageSmall\WhiteOnR.bmp" />
+    <Image Include="Image\BlackOff.bmp" />
+    <Image Include="Image\BlackOn.bmp" />
+    <Image Include="Image\WhiteOff.bmp" />
+    <Image Include="Image\WhiteOffB.bmp" />
+    <Image Include="Image\WhiteOffChip.bmp" />
+    <Image Include="Image\WhiteOffL.bmp" />
+    <Image Include="Image\WhiteOffR.bmp" />
+    <Image Include="Image\WhiteOn.bmp" />
+    <Image Include="Image\WhiteOnB.bmp" />
+    <Image Include="Image\WhiteOnChip.bmp" />
+    <Image Include="Image\WhiteOnL.bmp" />
+    <Image Include="Image\WhiteOnR.bmp" />
+    <Image Include="res\FmStation.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

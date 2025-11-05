@@ -1,0 +1,663 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#include ""res\\FmStation.rc2""  // Microsoft Visual C++ 以外で編集されたリソース\r\n"
+    "#include ""l.JPN\\afxres.rc""      // 標準コンポーネント\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include  ""l.JPN\\afxribbon.rc""   // MFC リボンおよびコントロール バー リソース\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\FmStation.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FMSTATION_DIALOG DIALOGEX 0, 0, 310, 192
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "OPNx Timbre Editor mkⅡ"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_DEVICE,24,173,126,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_TAB,"SysTabControl32",0x0,1,0,309,167
+    PUSHBUTTON      "Reset",IDC_BUTTON_RESET,269,174,36,12,NOT WS_TABSTOP
+    LTEXT           "Input",IDC_STATIC,6,175,15,8
+    PUSHBUTTON      "Load",IDC_BUTTON_LOAD,216,174,24,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Save",IDC_BUTTON_SAVE,240,174,24,12,NOT WS_TABSTOP
+    LTEXT           "",IDC_MASTER_STATIC_LOG,156,176,54,8
+END
+
+IDD_SETTING_TAB DIALOGEX 0, 0, 306, 153
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_SETTING_COPY_FORMAT_COMBO,42,6,66,30,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "拡張コピー",IDC_STATIC,6,8,30,8
+    CONTROL         "拡張コピーと通常コピーの音色形式を入れ替える",IDC_SETTING_SWAP_COPY_FORMAT_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,6,147,10
+    CONTROL         "ペーストで取り込んだ音色形式を拡張コピーに自動設定する",IDC_SETTING_AUTO_COPY_FORMAT_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,18,177,10
+    CONTROL         "SLの増減をTLに反映させる",IDC_SETTING_SLTL_LINK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,30,90,10
+    CONTROL         "",IDC_SETTING_VOLUME_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,38,30,72,12
+    LTEXT           "Volume",IDC_STATIC,6,31,23,8
+    LTEXT           "x0.0",IDC_STATIC,42,42,12,8
+    LTEXT           "x4.0",IDC_STATIC,96,42,12,8
+    COMBOBOX        IDC_SETTING_FILTER_COMBO,42,78,66,30,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SETTING_CUTOFF_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,38,102,72,12
+    CONTROL         "",IDC_SETTING_RESONANCE_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,152,102,72,12
+    CONTROL         "",IDC_SETTING_DC_CUT_RATE_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,152,79,72,12
+    LTEXT           "Filter",IDC_STATIC,7,80,16,8
+    LTEXT           "Cutoff",IDC_STATIC,6,103,19,8
+    LTEXT           "Resonance",IDC_STATIC,120,103,33,8
+    CONTROL         "DC Cut",IDC_SETTING_DC_CUT_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,79,36,10
+    LTEXT           "0.01",IDC_STATIC,42,114,12,8
+    LTEXT           "0.99",IDC_STATIC,96,114,12,8
+    LTEXT           "0.01",IDC_STATIC,156,114,12,8
+    LTEXT           "1.00",IDC_STATIC,210,114,12,8
+    LTEXT           "0.990",IDC_STATIC,156,91,16,8
+    LTEXT           "0.999",IDC_STATIC,207,91,16,8
+    CONTROL         "",IDC_SETTING_PREVIEW_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,38,54,72,12
+    LTEXT           "Preview",IDC_STATIC,6,55,24,8
+    LTEXT           "ch.1",IDC_STATIC,42,66,12,8
+    LTEXT           "ch.16",IDC_STATIC,93,66,16,8
+    LTEXT           "試聴に用いる MIDI ch",IDC_STATIC,120,55,62,8
+    COMBOBOX        IDC_SETTING_PORTAMENTO_COMBO,42,126,66,30,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Portamento",IDC_STATIC,6,128,34,8
+    CONTROL         "",IDC_SETTING_TUNING_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,152,126,72,12
+    LTEXT           "Tuning",IDC_STATIC,120,128,20,8
+    LTEXT           "390Hz",IDC_STATIC,156,138,19,8
+    LTEXT           "490Hz",IDC_STATIC,204,138,19,8
+    LTEXT           "000Hz",IDC_SETTING_TUNING_STATIC,226,127,19,8
+END
+
+IDD_MODULE_TAB DIALOGEX 0, 0, 306, 153
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPCHILDREN
+FONT 9, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_MODULE_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOSCROLL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,306,84
+END
+
+IDD_MIDI_TAB DIALOGEX 0, 0, 306, 153
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPCHILDREN
+FONT 9, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_MIDI_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOSCROLL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,306,153
+END
+
+IDD_INST_TAB DIALOGEX 0, 0, 306, 153
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_INST_LIST_PROGRAM,0,12,90,120,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_INST_LIST_BATCH,108,12,90,120,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_INST_LIST_TIMBRE,216,12,90,120,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Program",IDC_STATIC,0,1,84,8
+    LTEXT           "Batch",IDC_STATIC,108,1,84,8
+    LTEXT           "Timbre",IDC_INST_STATIC_TIMBRE,216,1,84,8
+    PUSHBUTTON      "←",IDC_INST_BUTTON_PROGRAM_ADD,90,66,18,12,NOT WS_TABSTOP
+    CTEXT           "←",IDC_STATIC,198,67,17,8
+    LTEXT           "BankLSB",IDC_STATIC,28,138,26,8
+    CONTROL         "",IDC_INST_SPIN_BATCH_ORDER,"msctls_updown32",UDS_ARROWKEYS,108,132,10,18
+    LTEXT           "Order",IDC_STATIC,120,138,18,8
+    CONTROL         "",IDC_INST_SPIN_TIMBRE_ORDER,"msctls_updown32",UDS_ARROWKEYS,216,132,10,18
+    LTEXT           "Order",IDC_STATIC,228,138,18,8
+    PUSHBUTTON      "Remove",IDC_INST_BUTTON_PROGRAM_REMOVE,60,136,30,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_INST_BUTTON_BATCH_ADD,162,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Del",IDC_INST_BUTTON_BATCH_DELETE,180,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_INST_BUTTON_TIMBRE_ADD,270,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Del",IDC_INST_BUTTON_TIMBRE_DELETE,288,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Dup",IDC_INST_BUTTON_BATCH_DUP,144,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Dup",IDC_INST_BUTTON_TIMBRE_DUP,252,135,18,12,NOT WS_TABSTOP
+    EDITTEXT        IDC_INST_EDIT_BANK,10,136,15,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP,WS_EX_RIGHT
+    CONTROL         "",IDC_INST_SPIN_BANK,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,0,132,10,18
+END
+
+IDD_BATCH_DIALOG DIALOGEX 0, 0, 300, 48
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Batch"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_BATCHDLG_EDIT_NAME,30,6,114,12,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,6,8,24,8
+    CONTROL         "",IDC_BATCHDLG_STATIC_KEYBOARD,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE,0,24,138,20
+    LTEXT           "",IDC_BATCH_LOG,150,8,44,8
+END
+
+IDD_TIMBRE_DIALOG DIALOGEX 0, 0, 300, 165
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Timbre"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMBREDLG_EDIT_NAME,30,6,114,12,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,6,8,18,8
+    CONTROL         "",IDC_TIMBREDLG_STATIC_KEYBOARD,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE,0,145,300,20
+    RTEXT           "EN",IDC_STATIC,30,30,10,8
+    CTEXT           "FDE",IDC_STATIC,47,30,15,8
+    CTEXT           "ALG",IDC_STATIC,69,30,15,8
+    RTEXT           "FB",IDC_STATIC,86,30,10,8
+    CTEXT           "NUM",IDC_STATIC,103,30,15,8
+    CTEXT           "KML",IDC_STATIC,120,30,15,8
+    CTEXT           "KMH",IDC_STATIC,137,30,15,8
+    CTEXT           "DUR",IDC_STATIC,156,30,13,8
+    RTEXT           "",IDC_STATIC,171,30,8,8
+    RTEXT           "",IDC_STATIC,188,30,8,8
+    RTEXT           "",IDC_STATIC,205,30,8,8
+    RTEXT           "SE",IDC_STATIC,224,30,8,8
+    CTEXT           "FIX",IDC_STATIC,244,30,10,8
+    RTEXT           "KT",IDC_STATIC,260,30,10,8
+    CTEXT           "FDT",IDC_STATIC,276,30,12,8
+    RTEXT           "EN",IDC_STATIC,30,65,10,8
+    CTEXT           "FDE",IDC_STATIC,47,65,15,8
+    RTEXT           "AR",IDC_STATIC,69,65,10,8
+    RTEXT           "DR",IDC_STATIC,86,65,10,8
+    RTEXT           "SR",IDC_STATIC,103,65,10,8
+    RTEXT           "RR",IDC_STATIC,120,65,10,8
+    RTEXT           "SL",IDC_STATIC,137,65,10,8
+    RTEXT           "TL",IDC_STATIC,154,65,10,8
+    RTEXT           "KS",IDC_STATIC,171,65,10,8
+    RTEXT           "MT",IDC_STATIC,188,65,10,8
+    RTEXT           "DT",IDC_STATIC,205,65,10,8
+    CTEXT           "SSG",IDC_STATIC,222,65,15,8
+    CTEXT           "FIX",IDC_STATIC,244,65,10,8
+    RTEXT           "KT",IDC_STATIC,260,65,10,8
+    CTEXT           "FDT",IDC_STATIC,276,65,12,8
+    LTEXT           "OP1",IDC_TIMBRE_OP1_STATIC,9,80,12,8
+    LTEXT           "OP2",IDC_TIMBRE_OP2_STATIC,9,95,12,8
+    LTEXT           "OP3",IDC_TIMBRE_OP3_STATIC,9,110,12,8
+    LTEXT           "OP4",IDC_TIMBRE_OP4_STATIC,9,125,12,8
+    RTEXT           "000",IDC_TIMBRE_EN_STATIC,30,45,12,8
+    RTEXT           "000",IDC_TIMBRE_FDE_STATIC,47,45,12,8
+    RTEXT           "000",IDC_TIMBRE_ALG_STATIC,69,45,12,8
+    RTEXT           "000",IDC_TIMBRE_FB_STATIC,86,45,12,8
+    RTEXT           "000",IDC_TIMBRE_NUM_STATIC,103,45,12,8
+    RTEXT           "000",IDC_TIMBRE_KML_STATIC,120,45,12,8
+    RTEXT           "000",IDC_TIMBRE_KMH_STATIC,137,45,12,8
+    RTEXT           "0000",IDC_TIMBRE_VOID1_STATIC,155,45,14,8
+    RTEXT           "000",IDC_TIMBRE_VOID2_STATIC,171,45,12,8
+    RTEXT           "000",IDC_TIMBRE_VOID3_STATIC,188,45,12,8
+    RTEXT           "000",IDC_TIMBRE_VOID4_STATIC,205,45,12,8
+    RTEXT           "000",IDC_TIMBRE_SE_STATIC,222,45,12,8
+    RTEXT           "000",IDC_TIMBRE_FIX_STATIC,244,45,12,8
+    RTEXT           "0000",IDC_TIMBRE_KT_STATIC,260,45,13,8
+    RTEXT           "0000",IDC_TIMBRE_FDT_STATIC,276,45,15,8
+    RTEXT           "000",IDC_TIMBRE_EN1_STATIC,30,80,12,8
+    RTEXT           "000",IDC_TIMBRE_FDE1_STATIC,47,80,12,8
+    RTEXT           "000",IDC_TIMBRE_AR1_STATIC,69,80,12,8
+    RTEXT           "000",IDC_TIMBRE_DR1_STATIC,86,80,12,8
+    RTEXT           "000",IDC_TIMBRE_SR1_STATIC,103,80,12,8
+    RTEXT           "000",IDC_TIMBRE_RR1_STATIC,120,80,12,8
+    RTEXT           "000",IDC_TIMBRE_SL1_STATIC,137,80,12,8
+    RTEXT           "000",IDC_TIMBRE_TL1_STATIC,154,80,12,8
+    RTEXT           "000",IDC_TIMBRE_KS1_STATIC,171,80,12,8
+    RTEXT           "000",IDC_TIMBRE_MT1_STATIC,188,80,12,8
+    RTEXT           "000",IDC_TIMBRE_DT1_STATIC,205,80,12,8
+    RTEXT           "000",IDC_TIMBRE_SSG1_STATIC,222,80,12,8
+    RTEXT           "000",IDC_TIMBRE_SE_FIX1_STATIC,244,80,12,8
+    RTEXT           "0000",IDC_TIMBRE_SE_KT1_STATIC,260,80,13,8
+    RTEXT           "0000",IDC_TIMBRE_SE_FDT1_STATIC,276,80,15,8
+    RTEXT           "000",IDC_TIMBRE_EN2_STATIC,30,95,12,8
+    RTEXT           "000",IDC_TIMBRE_FDE2_STATIC,47,95,12,8
+    RTEXT           "000",IDC_TIMBRE_AR2_STATIC,69,95,12,8
+    RTEXT           "000",IDC_TIMBRE_DR2_STATIC,86,95,12,8
+    RTEXT           "000",IDC_TIMBRE_SR2_STATIC,103,95,12,8
+    RTEXT           "000",IDC_TIMBRE_RR2_STATIC,120,95,12,8
+    RTEXT           "000",IDC_TIMBRE_SL2_STATIC,137,95,12,8
+    RTEXT           "000",IDC_TIMBRE_TL2_STATIC,154,95,12,8
+    RTEXT           "000",IDC_TIMBRE_KS2_STATIC,171,95,12,8
+    RTEXT           "000",IDC_TIMBRE_MT2_STATIC,188,95,12,8
+    RTEXT           "000",IDC_TIMBRE_DT2_STATIC,205,95,12,8
+    RTEXT           "000",IDC_TIMBRE_SSG2_STATIC,222,95,12,8
+    RTEXT           "000",IDC_TIMBRE_SE_FIX2_STATIC,244,95,12,8
+    RTEXT           "0000",IDC_TIMBRE_SE_KT2_STATIC,260,95,13,8
+    RTEXT           "0000",IDC_TIMBRE_SE_FDT2_STATIC,276,95,15,8
+    RTEXT           "000",IDC_TIMBRE_EN3_STATIC,30,110,12,8
+    RTEXT           "000",IDC_TIMBRE_FDE3_STATIC,47,110,12,8
+    RTEXT           "000",IDC_TIMBRE_AR3_STATIC,69,110,12,8
+    RTEXT           "000",IDC_TIMBRE_DR3_STATIC,86,110,12,8
+    RTEXT           "000",IDC_TIMBRE_SR3_STATIC,103,110,12,8
+    RTEXT           "000",IDC_TIMBRE_RR3_STATIC,120,110,12,8
+    RTEXT           "000",IDC_TIMBRE_SL3_STATIC,137,110,12,8
+    RTEXT           "000",IDC_TIMBRE_TL3_STATIC,154,110,12,8
+    RTEXT           "000",IDC_TIMBRE_KS3_STATIC,171,110,12,8
+    RTEXT           "000",IDC_TIMBRE_MT3_STATIC,188,110,12,8
+    RTEXT           "000",IDC_TIMBRE_DT3_STATIC,205,110,12,8
+    RTEXT           "000",IDC_TIMBRE_SSG3_STATIC,222,110,12,8
+    RTEXT           "000",IDC_TIMBRE_SE_FIX3_STATIC,244,110,12,8
+    RTEXT           "0000",IDC_TIMBRE_SE_KT3_STATIC,260,110,13,8
+    RTEXT           "0000",IDC_TIMBRE_SE_FDT3_STATIC,276,110,15,8
+    RTEXT           "000",IDC_TIMBRE_EN4_STATIC,30,125,12,8
+    RTEXT           "000",IDC_TIMBRE_FDE4_STATIC,47,125,12,8
+    RTEXT           "000",IDC_TIMBRE_AR4_STATIC,69,125,12,8
+    RTEXT           "000",IDC_TIMBRE_DR4_STATIC,86,125,12,8
+    RTEXT           "000",IDC_TIMBRE_SR4_STATIC,103,125,12,8
+    RTEXT           "000",IDC_TIMBRE_RR4_STATIC,120,125,12,8
+    RTEXT           "000",IDC_TIMBRE_SL4_STATIC,137,125,12,8
+    RTEXT           "000",IDC_TIMBRE_TL4_STATIC,154,125,12,8
+    RTEXT           "000",IDC_TIMBRE_KS4_STATIC,171,125,12,8
+    RTEXT           "000",IDC_TIMBRE_MT4_STATIC,188,125,12,8
+    RTEXT           "000",IDC_TIMBRE_DT4_STATIC,205,125,12,8
+    RTEXT           "000",IDC_TIMBRE_SSG4_STATIC,222,125,12,8
+    RTEXT           "000",IDC_TIMBRE_SE_FIX4_STATIC,244,125,12,8
+    RTEXT           "0000",IDC_TIMBRE_SE_KT4_STATIC,260,125,13,8
+    RTEXT           "0000",IDC_TIMBRE_SE_FDT4_STATIC,276,125,15,8
+    CONTROL         IDB_BITMAP_ALG0,IDC_TIMBRE_ALG0_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG1,IDC_TIMBRE_ALG1_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG2,IDC_TIMBRE_ALG2_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG3,IDC_TIMBRE_ALG3_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG4,IDC_TIMBRE_ALG4_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG5,IDC_TIMBRE_ALG5_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG6,IDC_TIMBRE_ALG6_STATIC,"Static",SS_BITMAP,5,30,18,21
+    CONTROL         IDB_BITMAP_ALG7,IDC_TIMBRE_ALG7_STATIC,"Static",SS_BITMAP,5,30,18,21
+    LTEXT           "",IDC_TIMBRE_LOG,150,8,44,8
+    PUSHBUTTON      "OK",IDC_TIMBREDLG_OK,261,6,30,12,NOT WS_TABSTOP
+END
+
+IDD_DRUM_TAB DIALOGEX 0, 0, 306, 153
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_DRUM_LIST_NOTE,0,12,90,120,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_DRUM_LIST_BATCH,108,12,90,120,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_DRUM_LIST_TIMBRE,216,12,90,120,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Note",IDC_STATIC,0,1,84,8
+    LTEXT           "Batch",IDC_STATIC,108,1,84,8
+    LTEXT           "Timbre",IDC_DRUM_STATIC_TIMBRE,216,1,84,8
+    PUSHBUTTON      "←",IDC_DRUM_BUTTON_NOTE_ADD,90,66,18,12,NOT WS_TABSTOP
+    CTEXT           "←",IDC_STATIC,198,67,17,8
+    LTEXT           "Program",IDC_STATIC,28,138,24,8
+    CONTROL         "",IDC_DRUM_SPIN_BATCH_ORDER,"msctls_updown32",UDS_ARROWKEYS,108,132,10,18
+    LTEXT           "Order",IDC_STATIC,120,138,18,8
+    CONTROL         "",IDC_DRUM_SPIN_TIMBRE_ORDER,"msctls_updown32",UDS_ARROWKEYS,216,132,10,18
+    LTEXT           "Order",IDC_STATIC,228,138,18,8
+    PUSHBUTTON      "Remove",IDC_DRUM_BUTTON_NOTE_REMOVE,60,136,30,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_DRUM_BUTTON_BATCH_ADD,162,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Del",IDC_DRUM_BUTTON_BATCH_DELETE,180,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_DRUM_BUTTON_TIMBRE_ADD,270,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Del",IDC_DRUM_BUTTON_TIMBRE_DELETE,288,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Dup",IDC_DRUM_BUTTON_BATCH_DUP,144,135,18,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Dup",IDC_DRUM_BUTTON_TIMBRE_DUP,252,135,18,12,NOT WS_TABSTOP
+    EDITTEXT        IDC_DRUM_EDIT_PROGRAM,10,136,15,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP,WS_EX_RIGHT
+    CONTROL         "",IDC_DRUM_SPIN_PROGRAM,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,0,132,10,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <会社名>"
+            VALUE "FileDescription", "FmStation"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "FmStation.exe"
+            VALUE "LegalCopyright", "TODO: (C) <会社名>.  All rights reserved."
+            VALUE "OriginalFilename", "FmStation.exe"
+            VALUE "ProductName", "TODO: <製品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_FMSTATION_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 191
+    END
+
+    IDD_SETTING_TAB, DIALOG
+    BEGIN
+    END
+
+    IDD_MODULE_TAB, DIALOG
+    BEGIN
+    END
+
+    IDD_MIDI_TAB, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_INST_TAB, DIALOG
+    BEGIN
+    END
+
+    IDD_BATCH_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 6
+    END
+
+    IDD_TIMBRE_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_DRUM_TAB, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_FMSTATION_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SETTING_TAB AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MODULE_TAB AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0
+END
+
+IDD_MIDI_TAB AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0
+END
+
+IDD_INST_TAB AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_BATCH_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TIMBRE_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DRUM_TAB AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SMALL_BLACK_OFF     BITMAP                  "ImageSmall\\BlackOff.bmp"
+
+IDB_SMALL_BLACK_ON      BITMAP                  "ImageSmall\\BlackOn.bmp"
+
+IDB_SMALL_WHITE_OFF_BOTH BITMAP                  "ImageSmall\\WhiteOffB.bmp"
+
+IDB_SMALL_WHITE_OFF_LEFT BITMAP                  "ImageSmall\\WhiteOffL.bmp"
+
+IDB_SMALL_WHITE_OFF_RIGHT BITMAP                  "ImageSmall\\WhiteOffR.bmp"
+
+IDB_SMALL_WHITE_ON_BOTH BITMAP                  "ImageSmall\\WhiteOnB.bmp"
+
+IDB_SMALL_WHITE_ON_LEFT BITMAP                  "ImageSmall\\WhiteOnL.bmp"
+
+IDB_SMALL_WHITE_ON_RIGHT BITMAP                  "ImageSmall\\WhiteOnR.bmp"
+
+IDB_MEDIUM_BLACK_OFF    BITMAP                  "ImageMedium\\BlackOff.bmp"
+
+IDB_MEDIUM_BLACK_ON     BITMAP                  "ImageMedium\\BlackOn.bmp"
+
+IDB_MEDIUM_WHITE_OFF_BOTH BITMAP                  "ImageMedium\\WhiteOffB.bmp"
+
+IDB_MEDIUM_WHITE_OFF_LEFT BITMAP                  "ImageMedium\\WhiteOffL.bmp"
+
+IDB_MEDIUM_WHITE_OFF_RIGHT BITMAP                  "ImageMedium\\WhiteOffR.bmp"
+
+IDB_MEDIUM_WHITE_ON_BOTH BITMAP                  "ImageMedium\\WhiteOnB.bmp"
+
+IDB_MEDIUM_WHITE_ON_LEFT BITMAP                  "ImageMedium\\WhiteOnL.bmp"
+
+IDB_MEDIUM_WHITE_ON_RIGHT BITMAP                  "ImageMedium\\WhiteOnR.bmp"
+
+IDB_BIG_BLACK_OFF       BITMAP                  "ImageBig\\BlackOff.bmp"
+
+IDB_BIG_BLACK_ON        BITMAP                  "ImageBig\\BlackOn.bmp"
+
+IDB_BIG_WHITE_OFF_BOTH  BITMAP                  "ImageBig\\WhiteOffB.bmp"
+
+IDB_BIG_WHITE_OFF_LEFT  BITMAP                  "ImageBig\\WhiteOffL.bmp"
+
+IDB_BIG_WHITE_OFF_RIGHT BITMAP                  "ImageBig\\WhiteOffR.bmp"
+
+IDB_BIG_WHITE_ON_BOTH   BITMAP                  "ImageBig\\WhiteOnB.bmp"
+
+IDB_BIG_WHITE_ON_LEFT   BITMAP                  "ImageBig\\WhiteOnL.bmp"
+
+IDB_BIG_WHITE_ON_RIGHT  BITMAP                  "ImageBig\\WhiteOnR.bmp"
+
+IDB_BITMAP_ALG0         BITMAP                  "ImageAlg\\0.bmp"
+
+IDB_BITMAP_ALG1         BITMAP                  "ImageAlg\\1.bmp"
+
+IDB_BITMAP_ALG2         BITMAP                  "ImageAlg\\2.bmp"
+
+IDB_BITMAP_ALG3         BITMAP                  "ImageAlg\\3.bmp"
+
+IDB_BITMAP_ALG4         BITMAP                  "ImageAlg\\4.bmp"
+
+IDB_BITMAP_ALG5         BITMAP                  "ImageAlg\\5.bmp"
+
+IDB_BITMAP_ALG6         BITMAP                  "ImageAlg\\6.bmp"
+
+IDB_BITMAP_ALG7         BITMAP                  "ImageAlg\\7.bmp"
+
+IDB_BIG_BLACK_ON_INVALID BITMAP                  "ImageBig\\BlackOn_Invalid.bmp"
+
+IDB_BIG_WHITE_ON_BOTH_INVALID BITMAP                  "ImageBig\\WhiteOnB_Invalid.bmp"
+
+IDB_BIG_WHITE_ON_LEFT_INVALID BITMAP                  "ImageBig\\WhiteOnL_Invalid.bmp"
+
+IDB_BIG_WHITE_ON_RIGHT_INVALID BITMAP                  "ImageBig\\WhiteOnR_Invalid.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SETTING_TAB DLGINIT
+BEGIN
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 6, 0
+0x554d, 0x4f43, 0x004d, 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x4d50, 0x2844, 0x504f, 0x8c4e, 0x295e, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x4d50, 0x2844, 0x504f, 0x8c4d, 0x295e, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 4, 0
+0x4d46, 0x0050, 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 7, 0
+0x4d46, 0x2850, 0x2941, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 8, 0
+0x4d46, 0x3750, 0x4628, 0x0029, 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 9, 0
+0x4d46, 0x3750, 0x4628, 0x2941, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 9, 0
+0x4d46, 0x3750, 0x4628, 0x2943, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x6d6d, 0x326c, 0x6776, 0x286d, 0x2946, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x6d6d, 0x326c, 0x6776, 0x286d, 0x294e, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x6d6d, 0x326c, 0x6776, 0x286d, 0x294d, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 12, 0
+0x756d, 0x6f63, 0x446d, 0x746f, 0x454e, 0x0054, 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 17, 0
+0x414d, 0x696d, 0x6964, 0x654d, 0x6f6d, 0x6d28, 0x706f, 0x296e, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 17, 0
+0x414d, 0x696d, 0x6964, 0x654d, 0x6f6d, 0x6d28, 0x706f, 0x296d, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x2d5a, 0x754d, 0x6973, 0x2863, 0x2976, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x2d5a, 0x754d, 0x6973, 0x2863, 0x2940, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 7, 0
+0x414e, 0x4447, 0x5652, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 14, 0
+0x524e, 0x4454, 0x5652, 0x4d28, 0x444f, 0x3545, 0x0029, 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 7, 0
+0x6d6d, 0x646c, 0x7672, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 7, 0
+0x6d6d, 0x676c, 0x6975, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 7, 0
+0x554d, 0x5041, 0x3839, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x3356, 0x4d4d, 0x284c, 0x504f, 0x294e, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 12, 0
+0x3356, 0x4d4d, 0x284c, 0x504f, 0x414e, 0x0029, 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 11, 0
+0x3356, 0x4d4d, 0x284c, 0x504f, 0x294d, "\000" 
+    IDC_SETTING_COPY_FORMAT_COMBO, 0x403, 9, 0
+0x384e, 0x4238, 0x5341, 0x4349, "\000" 
+    IDC_SETTING_FILTER_COMBO, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_SETTING_FILTER_COMBO, 0x403, 8, 0
+0x6f4c, 0x5077, 0x7361, 0x0073, 
+    IDC_SETTING_FILTER_COMBO, 0x403, 9, 0
+0x6948, 0x6867, 0x6150, 0x7373, "\000" 
+    IDC_SETTING_FILTER_COMBO, 0x403, 9, 0
+0x6142, 0x646e, 0x6150, 0x7373, "\000" 
+    IDC_SETTING_PORTAMENTO_COMBO, 0x403, 5, 0
+0x6954, 0x656d, "\000" 
+    IDC_SETTING_PORTAMENTO_COMBO, 0x403, 5, 0
+0x6152, 0x6574, "\000" 
+    0
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE 17, 1
+#include "res\FmStation.rc2"  // Microsoft Visual C++ 以外で編集されたリソース
+#include "l.JPN\afxres.rc"      // 標準コンポーネント
+#if !defined(_AFXDLL)
+#include  "l.JPN\afxribbon.rc"   // MFC リボンおよびコントロール バー リソース
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
