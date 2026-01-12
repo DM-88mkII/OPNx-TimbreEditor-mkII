@@ -154,7 +154,6 @@ class CMidiTab : public CDialogEx
 		};
 		enum EDataEntry
 		{
-			EDataEntry_None,
 			EDataEntry_ModeRPN,
 			EDataEntry_ModeNRPN,
 		};

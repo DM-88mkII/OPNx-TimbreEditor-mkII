@@ -462,7 +462,7 @@ void CMidiTab::ResetAllControllers(i8 MidiChannel)
 		
 		ChannelInfo.aParam[EParam_LocalSwitch] = 127;
 		
-		ChannelInfo.DataEntry = EDataEntry_None;
+		ChannelInfo.DataEntry = EDataEntry_ModeRPN;
 		
 		// 
 		std::ranges::fill(ChannelInfo.aNoteOn, 0);
@@ -522,10 +522,6 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			//TRACE(_T("Data Entry MSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
-				case EDataEntry_None:
-				{
-					break;
-				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -632,10 +628,6 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			//TRACE(_T("Data Entry LSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
-				case EDataEntry_None:
-				{
-					break;
-				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -804,10 +796,6 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			TRACE(_T("Data Increment : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
-				case EDataEntry_None:
-				{
-					break;
-				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -864,10 +852,6 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			TRACE(_T("Data Decrement : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
-				case EDataEntry_None:
-				{
-					break;
-				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -922,25 +906,25 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 		}
 		case 98:{//NRPN LSB
 			SetParamLSB(ChannelInfo.aParam[EParam_NRPN], Value);
-			ChannelInfo.DataEntry = (ChannelInfo.aParam[EParam_NRPN] != 0x3fff)? EDataEntry_ModeNRPN: EDataEntry_None;
+			ChannelInfo.DataEntry = EDataEntry_ModeNRPN;
 			//TRACE(_T("NRPN LSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			break;
 		}
 		case 99:{//NRPN MSB
 			SetParamMSB(ChannelInfo.aParam[EParam_NRPN], Value);
-			ChannelInfo.DataEntry = EDataEntry_None;
+			ChannelInfo.DataEntry = EDataEntry_ModeNRPN;
 			//TRACE(_T("NRPN MSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			break;
 		}
 		case 100:{//RPN LSB
 			SetParamLSB(ChannelInfo.aParam[EParam_RPN], Value);
-			ChannelInfo.DataEntry = (ChannelInfo.aParam[EParam_RPN] != 0x3fff)? EDataEntry_ModeRPN: EDataEntry_None;
+			ChannelInfo.DataEntry = EDataEntry_ModeRPN;
 			//TRACE(_T("RPN LSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			break;
 		}
 		case 101:{//RPN MSB
 			SetParamMSB(ChannelInfo.aParam[EParam_RPN], Value);
-			ChannelInfo.DataEntry = EDataEntry_None;
+			ChannelInfo.DataEntry = EDataEntry_ModeRPN;
 			//TRACE(_T("RPN MSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			break;
 		}
