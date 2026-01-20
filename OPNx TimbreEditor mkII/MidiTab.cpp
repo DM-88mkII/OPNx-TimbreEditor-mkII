@@ -522,6 +522,9 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			//TRACE(_T("Data Entry MSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
+				{
+					break;
+				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -628,6 +631,9 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			//TRACE(_T("Data Entry LSB : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
+				{
+					break;
+				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -796,6 +802,9 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			TRACE(_T("Data Increment : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
+				{
+					break;
+				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
@@ -852,6 +861,9 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			TRACE(_T("Data Decrement : %d : %d\n"), Value, ChannelInfo.DataEntry);
 			switch (ChannelInfo.DataEntry){
 				default:
+				{
+					break;
+				}
 				case EDataEntry_ModeRPN:
 				{
 					switch (ChannelInfo.aParam[EParam_RPN]){
