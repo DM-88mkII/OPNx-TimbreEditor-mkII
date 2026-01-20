@@ -138,6 +138,14 @@ int CListBoxT<T>::GetCount()
 
 
 template <class T>
+int CListBoxT<T>::GetTopIndex()
+{
+	return This.GetTopIndex();
+}
+
+
+
+template <class T>
 int CListBoxT<T>::SetTopIndex(int nIndex)
 {
 	return This.SetTopIndex(nIndex);

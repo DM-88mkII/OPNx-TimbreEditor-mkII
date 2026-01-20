@@ -787,7 +787,6 @@ void CInstTab::OnBnClickedInstButtonProgramAdd()
 		iProgram = (iProgram < 0)? 0: iProgram;
 		
 		AddProgram(iProgram, iBatch);
-		ProgramList.SetTopIndex(iProgram);
 		ProgramList.SetFocus();
 		ProgramList.SetCurSel(iProgram);
 	}
@@ -803,8 +802,6 @@ void CInstTab::OnBnClickedInstButtonProgramRemove()
 	
 	auto iProgram = ProgramList.GetCurSel();
 	if (iProgram >= 0) RemoveProgram(iProgram);
-	
-	OnLbnSelchangeInstListProgram();
 }
 
 
@@ -826,7 +823,6 @@ void CInstTab::OnBnClickedInstButtonBatchAdd()
 		OnBnClickedInstButtonTimbreAdd();
 		UpdateTimbre(iBatch);
 	}
-	BatchList.SetTopIndex(iBatch);
 	BatchList.SetCurSel(iBatch);
 	BatchList.SetFocus();
 }
@@ -885,7 +881,6 @@ void CInstTab::OnBnClickedInstButtonTimbreAdd()
 		CString Name;
 		Name.Format(_T("New Timbre : %d"), rand());
 		AddTimbre(iBatch, iTimbre, Name);
-		TimbreList.SetTopIndex(iTimbre);
 		TimbreList.SetCurSel(iTimbre);
 		TimbreList.SetFocus();
 	}
@@ -934,19 +929,6 @@ void CInstTab::OnBnClickedInstButtonTimbreDelete()
 
 void CInstTab::OnLbnSelchangeInstListProgram()
 {
-	auto& ProgramList = *m_pProgramList;
-	auto& BatchList = *m_pBatchList;
-	auto& TimbreList = *m_pTimbreList;
-	
-	auto iProgram = ProgramList.GetCurSel();
-	if (iProgram >= 0){
-		auto pProgramBatch = ProgramList.GetDataPtr(iProgram);
-		auto iBatch = BatchList.FindDataPtr(-1, pProgramBatch);
-		if (iBatch != LB_ERR){
-			BatchList.SetCurSel(iBatch);
-			UpdateTimbre(iBatch);
-		}
-	}
 }
 
 
@@ -1113,17 +1095,10 @@ void CInstTab::OnLbnDblclkInstListProgram()
 	auto iProgram = ProgramList.GetCurSel();
 	if (iProgram >= 0){
 		auto pProgramBatch = ProgramList.GetDataPtr(iProgram);
-		auto& pBatchDlg = pProgramBatch->pBatchDlg;
-		if (pBatchDlg){
-			if (::IsWindow(pBatchDlg->m_hWnd)){
-				if (pBatchDlg->IsIconic()) pBatchDlg->ShowWindow(SW_RESTORE);
-				pBatchDlg->SetForegroundWindow();
-			}
-		} else {
-			pBatchDlg = std::make_unique<CBatchDlg>();
-			pBatchDlg->Create(IDD_BATCH_DIALOG);
-			pBatchDlg->ShowWindow(SW_SHOW);
-			pBatchDlg->SetBatch(pProgramBatch);
+		auto iBatch = BatchList.FindDataPtr(-1, pProgramBatch);
+		if (iBatch != LB_ERR){
+			BatchList.SetCurSel(iBatch);
+			UpdateTimbre(iBatch);
 		}
 	}
 }

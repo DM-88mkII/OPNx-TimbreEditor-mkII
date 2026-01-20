@@ -39,6 +39,7 @@ class CListBoxT
 	
 	public: int GetCount();
 	
+	public: int GetTopIndex();
 	public: int SetTopIndex(int nIndex);
 	
 	public: int GetCurSel();

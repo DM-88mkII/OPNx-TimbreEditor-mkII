@@ -535,7 +535,6 @@ void CDrumTab::OnBnClickedDrumButtonNoteAdd()
 		iNote = (iNote < 0)? 0: iNote;
 		
 		AddNote(iNote, iBatch);
-		NoteList.SetTopIndex(iNote);
 		NoteList.SetFocus();
 		NoteList.SetCurSel(iNote);
 	}
@@ -551,8 +550,6 @@ void CDrumTab::OnBnClickedDrumButtonNoteRemove()
 	
 	auto iNote = NoteList.GetCurSel();
 	if (iNote >= 0) RemoveNote(iNote);
-	
-	OnLbnSelchangeDrumListNote();
 }
 
 
@@ -574,7 +571,6 @@ void CDrumTab::OnBnClickedDrumButtonBatchAdd()
 		OnBnClickedDrumButtonTimbreAdd();
 		UpdateTimbre(iBatch);
 	}
-	BatchList.SetTopIndex(iBatch);
 	BatchList.SetCurSel(iBatch);
 	BatchList.SetFocus();
 }
@@ -633,7 +629,6 @@ void CDrumTab::OnBnClickedDrumButtonTimbreAdd()
 		CString Name;
 		Name.Format(_T("New Timbre : %d"), rand());
 		AddTimbre(iBatch, iTimbre, Name);
-		TimbreList.SetTopIndex(iTimbre);
 		TimbreList.SetCurSel(iTimbre);
 		TimbreList.SetFocus();
 	}
@@ -682,19 +677,6 @@ void CDrumTab::OnBnClickedDrumButtonTimbreDelete()
 
 void CDrumTab::OnLbnSelchangeDrumListNote()
 {
-	auto& NoteList = *m_pNoteList;
-	auto& BatchList = *m_pBatchList;
-	auto& TimbreList = *m_pTimbreList;
-	
-	auto iNote = NoteList.GetCurSel();
-	if (iNote >= 0){
-		auto pNoteBatch = NoteList.GetDataPtr(iNote);
-		auto iBatch = BatchList.FindDataPtr(-1, pNoteBatch);
-		if (iBatch != LB_ERR){
-			BatchList.SetCurSel(iBatch);
-			UpdateTimbre(iBatch);
-		}
-	}
 }
 
 
@@ -861,17 +843,10 @@ void CDrumTab::OnLbnDblclkDrumListNote()
 	auto iNote = NoteList.GetCurSel();
 	if (iNote >= 0){
 		auto pNoteBatch = NoteList.GetDataPtr(iNote);
-		auto& pBatchDlg = pNoteBatch->pBatchDlg;
-		if (pBatchDlg){
-			if (::IsWindow(pBatchDlg->m_hWnd)){
-				if (pBatchDlg->IsIconic()) pBatchDlg->ShowWindow(SW_RESTORE);
-				pBatchDlg->SetForegroundWindow();
-			}
-		} else {
-			pBatchDlg = std::make_unique<CBatchDlg>();
-			pBatchDlg->Create(IDD_BATCH_DIALOG);
-			pBatchDlg->ShowWindow(SW_SHOW);
-			pBatchDlg->SetBatch(pNoteBatch);
+		auto iBatch = BatchList.FindDataPtr(-1, pNoteBatch);
+		if (iBatch != LB_ERR){
+			BatchList.SetCurSel(iBatch);
+			UpdateTimbre(iBatch);
 		}
 	}
 }
