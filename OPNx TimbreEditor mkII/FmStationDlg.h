@@ -51,7 +51,7 @@ class CFmStationDlg : public CDialogEx, public IMidiCallback
 	public:
 		static constexpr int MidiChannels = 16;
 		static constexpr int MidiNotes = 128;
-		static constexpr int ChipNum = 8;
+		static constexpr int ChipNum = 16;
 		static constexpr int ChipChannels = 6;
 	
 	protected:

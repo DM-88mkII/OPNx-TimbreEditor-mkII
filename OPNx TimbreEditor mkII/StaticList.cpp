@@ -53,5 +53,6 @@ void CStaticList<ROW_NUM, COLUMN_NUM>::Create(int x, int y, int Height, std::arr
 
 
 template class CStaticList<8, 7>;
+template class CStaticList<16, 7>;
 template class CStaticList<16, 10>;
 template class CStaticList<16, 11>;

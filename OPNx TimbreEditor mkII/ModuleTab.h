@@ -32,7 +32,7 @@ class CModuleTab : public CDialogEx
 		CFmStationDlg& GetFmStationDlg();
 	
 	protected:
-		static constexpr int ChipNum = 8;
+		static constexpr int ChipNum = 16;
 		static constexpr int ChipChannels = 6;
 	
 	protected:

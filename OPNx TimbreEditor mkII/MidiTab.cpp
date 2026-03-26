@@ -943,9 +943,11 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 		
 		// 
 		case 120:{//All Sound Off
+			TRACE(_T("All Sound Off : %d\n"), MidiChannel);
 			break;
 		}
 		case 121:{//Reset All Controllers
+			TRACE(_T("Reset All Controllers : %d\n"), MidiChannel);
 			break;
 		}
 		case 122:{//Local Switch on/off
@@ -954,6 +956,7 @@ void CMidiTab::ControlChange(IMidiCallback* pCallback, i8 MidiChannel, BYTE CC, 
 			break;
 		}
 		case 123:{//All Notes Off
+			TRACE(_T("All Notes Off : %d\n"), MidiChannel);
 			break;
 		}
 		case 124:{//Omni Mode Off
