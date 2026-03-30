@@ -145,7 +145,8 @@ BEGIN_MESSAGE_MAP(CTimbreDlg, CDialogEx)
 	ON_WM_CLOSE()
 	ON_WM_CTLCOLOR()
 	ON_WM_ACTIVATE()
-	ON_BN_CLICKED(IDC_TIMBREDLG_OK, &CTimbreDlg::OnBnClickedTimbredlgOk)
+	ON_BN_CLICKED(IDC_TIMBREDLG_OK, &CTimbreDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_TIMBREDLG_REVERT, &CTimbreDlg::OnBnClickedRevert)
 END_MESSAGE_MAP()
 
 
@@ -665,9 +666,54 @@ void CTimbreDlg::OnClose()
 
 
 
-void CTimbreDlg::OnBnClickedTimbredlgOk()
+void CTimbreDlg::OnBnClickedOk()
 {
 	OnOK();
+}
+
+
+
+void CTimbreDlg::OnBnClickedRevert()
+{
+	if (m_pTimbre){
+		auto& Control = m_pTimbre->Control;
+		auto& aOperator = m_pTimbre->aOperator;
+		
+		{	// 
+			Control.EN.SetValue(BackupControl.EN);
+			Control.FDE.SetValue(BackupControl.FDE);
+			Control.ALG.SetValue(BackupControl.ALG);
+			Control.FB.SetValue(BackupControl.FB);
+			Control.NUM.SetValue(BackupControl.NUM);
+			Control.KML.SetValue(BackupControl.KML);
+			Control.KMH.SetValue(BackupControl.KMH);
+			Control.DUR.SetValue(BackupControl.DUR);
+			Control.SE.SetValue(BackupControl.SE);
+			Control.FIX.SetValue(BackupControl.FIX);
+			Control.KT.SetValue(BackupControl.KT);
+			Control.FDT.SetValue(BackupControl.FDT);
+		}
+		
+		for (int i = 0; i < std::size(aOperator); ++i){
+			aOperator[i].EN.SetValue(aBackupOperator[i].EN);
+			aOperator[i].FDE.SetValue(aBackupOperator[i].FDE);
+			aOperator[i].AR.SetValue(aBackupOperator[i].AR);
+			aOperator[i].DR.SetValue(aBackupOperator[i].DR);
+			aOperator[i].SR.SetValue(aBackupOperator[i].SR);
+			aOperator[i].RR.SetValue(aBackupOperator[i].RR);
+			aOperator[i].SL.SetValue(aBackupOperator[i].SL);
+			aOperator[i].TL.SetValue(aBackupOperator[i].TL);
+			aOperator[i].KS.SetValue(aBackupOperator[i].KS);
+			aOperator[i].MT.SetValue(aBackupOperator[i].MT);
+			aOperator[i].DT.SetValue(aBackupOperator[i].DT);
+			aOperator[i].SSG.SetValue(aBackupOperator[i].SSG);
+			aOperator[i].SE_FIX.SetValue(aBackupOperator[i].SE_FIX);
+			aOperator[i].SE_KT.SetValue(aBackupOperator[i].SE_KT);
+			aOperator[i].SE_FDT.SetValue(aBackupOperator[i].SE_FDT);
+		}
+		
+		DrawAllParam();
+	}
 }
 
 

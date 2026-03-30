@@ -58,7 +58,8 @@ class CTimbreDlg : public CDialogEx, public IKeyboardCallback
 		afx_msg void OnCancel();
 		afx_msg void OnClose();
 		afx_msg void OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized);
-		afx_msg void OnBnClickedTimbredlgOk();
+		afx_msg void OnBnClickedOk();
+		afx_msg void OnBnClickedRevert();
 	
 	protected:
 		static constexpr int MidiChannels = 16;
